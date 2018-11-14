@@ -1,0 +1,62 @@
+{
+  "name": "azure-function-index-wp",
+  "description": "Azure function for indexing wp sites",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "contributors": [
+    {
+      "name": "Jonas Enge",
+      "email": "jonas.enge@gmail.com",
+      "url": "https://github.com/maccyber"
+    }
+  ],
+  "main": "TimeTrigger/index.js",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "test": "standard && npm audit && ava",
+    "test-offline": "standard && ava",
+    "coverage": "nyc ava",
+    "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
+    "standard-fix": "standard --fix",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
+  },
+  "keywords": [
+    "azure",
+    "search",
+    "index",
+    "wp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telemark/azure-function-index-wp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/telemark/azure-function-index-wp/issues"
+  },
+  "homepage": "https://github.com/telemark/azure-function-index-wp#readme",
+  "devDependencies": {
+    "ava": "0.25.0",
+    "coveralls": "3.0.2",
+    "husky": "1.1.4",
+    "nyc": "13.1.0",
+    "standard": "12.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "jsonwebtoken": "8.3.0",
+    "striptags": "3.1.1",
+    "uuid-random": "1.0.6"
+  }
+}
