@@ -11,7 +11,7 @@
       "name": "mySbQueue",
       "type": "serviceBus",
       "direction": "out",
-      "queueName": "testqueue",
+      "queueName": "searchindexqueue",
       "connection": "SERVICEBUS_CONNECTION"
     }
   ]
