@@ -57,6 +57,6 @@
     "axios": "0.18.0",
     "jsonwebtoken": "8.5.0",
     "striptags": "3.1.1",
-    "uuid-random": "1.0.6"
+    "uuid-random": "1.0.7"
   }
 }
